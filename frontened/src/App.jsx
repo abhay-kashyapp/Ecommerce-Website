@@ -65,7 +65,7 @@ import SearchBar from './components/SearchBar'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Orders from './pages/Orders'
-import Verify from './pages/verify'
+import Verify from './pages/Verify'
 
 const App = () => {
   return (
