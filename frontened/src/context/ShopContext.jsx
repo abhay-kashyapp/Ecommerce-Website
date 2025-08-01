@@ -47,11 +47,11 @@ const ShopContextProvider = (props) => {
         itemId,
         size,
       }, {
-        headers: { token }
+        headers: {  Authorization: `Bearer ${token}` }
       });
     } catch (error) {
       console.log(error)
-      toast.error(error.message)
+      toast.error(error.response?.data?.message ||error.message)
     }
   }
 };
@@ -169,6 +169,8 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     getProductsData();
   }, []);
+
+
 
   useEffect(() => {
    if (!token && localStorage.getItem('token')) {
