@@ -1,30 +1,3 @@
-// import multer from "multer";
-
-// const storage = multer.diskStorage({
-//   filename:function(req,file,callback){
-//     callback(null,file.originalname)
-//   }
-// })
-
-// const upload = multer({storage});
-
-
-// export default upload
-
-
-// import multer from "multer";
-
-// // Use disk storage with original filename
-// const storage = multer.diskStorage({
-//   destination: "uploads/",
-//   filename: (req, file, cb) => {
-//     cb(null, Date.now() + "-" + file.originalname);
-//   }
-// });
-
-// const upload = multer({ storage });
-
-// export default upload;
 
 import multer from "multer";
 import fs from "fs";
@@ -41,7 +14,7 @@ if (!fs.existsSync(uploadDir)) {
 // Configure Multer storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, uploadDir); // ✅ use /tmp/uploads instead of "uploads/"
+    cb(null, uploadDir); 
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + "-" + file.originalname);
