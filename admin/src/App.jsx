@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './componnents/NavBar'
+// import Navbar from './componnents/NavBar'
 import Sidebar from './componnents/Sidebar'
 import {Routes,Route} from 'react-router-dom'
 import Add from './pages/Add'
@@ -10,6 +10,7 @@ import Login from './componnents/Login'
 import {ToastContainer} from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react'
+import Navbar from './componnents/Navbar'
 
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL

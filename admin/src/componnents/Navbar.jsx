@@ -10,4 +10,4 @@ const Navbar = ({setToken}) => {
   )
 }
 
-export default Navbar
+export default Navbar;
